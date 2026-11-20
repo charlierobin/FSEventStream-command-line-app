@@ -16,6 +16,7 @@ Info about the really useful stuff — modified files etc — comes out in JSON.
 
 Rather than mess around with Apple’s flags (all integers and bitmasks: [FSEventStreamEventFlags](https://developer.apple.com/documentation/coreservices/1455361-fseventstreameventflags?language=objc)) for event types, there’s a "flags" object in the JSON, with the following (possible) range of string keys (set to true):
 
+```
 MustScanSubDirs
 UserDropped
 KernelDropped
@@ -39,6 +40,7 @@ OwnEvent
 ItemIsHardlink
 ItemIsLastHardlink
 ItemCloned
+```
 
 There’s also a "path" value, and an "id" value. "id" is in the JSON as a string, even though it comes out of FSEventStream as an integer. I was having some difficulty with that, although I think I know why that was, now. But at the time, I just changed the "id" to a string and was done with it. (I’ve never used the event id in anything anyway. It’s really only in there for a vague sense of completeness.)
 
