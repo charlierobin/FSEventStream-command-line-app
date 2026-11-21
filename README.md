@@ -1,5 +1,7 @@
 # FSEventStream command line app
- 
+
+Monitors changes in a directory/directories. Uses [FSEventsStream](https://developer.apple.com/documentation/coreservices/file_system_events?language=objc) (so Mac only), written in Objective-C.
+
 Slightly linked to this other project: https://github.com/charlierobin/xojo-FSEventStream
 
 That one’s a dylib, which is something I was never really terribly happy about.
@@ -8,7 +10,7 @@ This one is a command line app, which I originally did way back when, and I’m 
 
 There’s a Xojo test app, just to demonstrate how it might be used within Xojo. But it should work with anything that’s got shell/subprocess/whatever it’s called capabilities. (And of course, you can run it straight from the Terminal just to check it out that way.)
 
-Usage is: FSEvents <path> [path ...]
+Usage is: FSEvents &lt;path&gt; [path ...]
 
 There’s no way of adding/removing paths once it is running. It’s designed to just run, until terminated.
 
@@ -54,3 +56,10 @@ https://developer.apple.com/documentation/coreservices/file_system_events?langua
 
 https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/FSEvents_ProgGuide/Introduction/Introduction.html?language=objc#//apple_ref/doc/uid/TP40005289
 
+Can be used with [subprocess](https://docs.python.org/3/library/subprocess.html) in Python.
+
+If something more cross platform in Python is required, there’s [watchdog](https://pypi.org/project/watchdog/).
+
+[How To Detect File Changes Using Python](https://www.geeksforgeeks.org/python/how-to-detect-file-changes-using-python/)
+
+[Building a Real-Time File Monitor in Python](https://medium.com/@kainatnafees/building-a-real-time-file-monitor-in-python-42fd86b0d7af)
